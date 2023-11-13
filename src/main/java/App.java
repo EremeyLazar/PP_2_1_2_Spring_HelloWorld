@@ -9,8 +9,8 @@ public class App {
         HelloWorld bean2 = (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
 
-        Cat beenCat = (Cat) applicationContext.getBean("cat");
-        Cat beenCat2 = (Cat) applicationContext.getBean("cat");
+        Cat beenCat = applicationContext.getBean(Cat.class);
+        Cat beenCat2 = applicationContext.getBean(Cat.class);
 
         System.out.println("Hello Words equal - " + (bean == bean2));
         System.out.println("Cats equal - " + (beenCat == beenCat2));
